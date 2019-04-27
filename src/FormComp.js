@@ -68,20 +68,23 @@ class FormComp extends Component {
 		    }
 
 		return (
-			<form onSubmit={this.handleSubmit} onClick={this.startListening}>
-		        <label>
-		          Name:
-		        </label>
-		          <input type="text" id="name" ref={(input) => this.input = input} onMouseEnter={this.blur} autoComplete="off"/>
-		        
-		        <br/>
-		        <label>
-		          Description:
-		        </label>
-		          <textarea rows = "5" cols = "50" id="desc" ref={(input) => this.input = input} onMouseEnter={this.blur} autoComplete="off"/>
-		        <br/>
-		        <input type="submit" value="Submit" />
-		    </form>
+			<div>
+				<h1> Create a Campaign </h1>
+				<form onSubmit={this.handleSubmit} onClick={this.startListening}>
+			        <label>
+			          Name:
+			        </label> <br/>
+			          <input type="text" id="name" ref={(input) => this.input = input} onMouseEnter={this.blur} autoComplete="off"/>
+			        
+			        <br/>
+			        <label>
+			          Description:
+			        </label><br/>
+			          <textarea rows = "5" cols = "50" id="desc" ref={(input) => this.input = input} onMouseEnter={this.blur} autoComplete="off"/>
+			        <br/>
+			        <input type="submit" value="Submit" />
+			    </form>
+		    </div>
 		)
 	}
 }
